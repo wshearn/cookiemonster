@@ -7,7 +7,7 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-router.get('/hey.jpg', function(req, res, next) {
+router.get('/api/hey.jpg', function(req, res, next) {
   console.log(req.cookies);
   console.log(req.signedCookies);
   var img = fs.readFileSync('./images/1234.jpg');
