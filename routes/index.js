@@ -11,7 +11,7 @@ router.get('/hey.jpg', function(req, res, next) {
   console.log(req.cookies);
   console.log(req.signedCookies);
   var img = fs.readFileSync('./images/1234.jpg');
-  res.cookie("openshift-session-token", "derp", { "domain": ".devshift.org" });
+  res.cookie("openshift-session-token", "derp", { "domain": ".devshift.org", "path": "/api/" });
   res.writeHead(200, {'Content-Type': 'image/jpg'});
   res.end(img, 'binary');  
 });
